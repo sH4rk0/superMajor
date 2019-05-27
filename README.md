@@ -1,6 +1,4 @@
-# Phaser 3 TypeScript Platformer Example
-
-Built with the [**SUPER MAJOR**](https://github.com/sH4rk0/superMajor#readme) starter.
+# SUPER MAJOR - Baronissi election day 2k19
 
 ## Play
 
