@@ -1,0 +1,21 @@
+{
+  "short_name": "Super Major",
+  "name": "Super Major",
+  "icons": [{
+      "src": "/assets/icons/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icons/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#e6e6e6",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "scope": "/",
+  "theme_color": "#000000"
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC" -//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<title>SUPER MAJOR - Baronissi election day 2k19!</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="SUPER MAJOR - Baronissi
+			election day 2k19!">
+	<meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0
+			minimal-ui" />
+	<meta property="og:title" content="SUPER MAJOR - Baronissi election day 2k19!" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://supermajor2k19.web.app/index.html" />
+	<meta property="og:image" content="https://supermajor2k19.web.app/assets/cover.jpg" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="800" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:description" content="SUPER MAJOR - Baronissi election day
+			2k19!" />
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/firebase.js"></script>
+	<style>
+		body {
+			background-color: #000;
+			background-image: url(assets/images/halloffame/bg.jpg);
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-repeat: repeat;
+			padding: 0;
+			margin: 0;
+
+		}
+
+		.wrapper {
+			background-image: url(assets/images/halloffame/bg-halloffame.jpg);
+			background-position: top center;
+			background-repeat: no-repeat;
+			min-height: 650px;
+
+		}
+
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-size: 100%;
+			font-family: 'Press Start 2P', cursive;
+			margin-top: 0;
+			padding-top: 340px;
+			margin-bottom: 160px;
+			line-height: 160%;
+		}
+
+		h1 a {
+			color: #fff;
+		}
+
+		h2 {
+			color: #fff;
+			text-align: center;
+			font-size: 100%;
+			font-family: 'Press Start 2P', cursive;
+			margin-top: 30px;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.mylist {
+			margin: 0 auto;
+			position: relative;
+			width: 100%;
+			margin-top: 30px;
+			padding: 0;
+			padding-top: 20px;
+			list-style-position: outside;
+		}
+
+		.mylist .row {
+			font-size: 80%;
+			line-height: 120%;
+			color: #fff;
+			text-align: left;
+			font-family: 'Press Start 2P', cursive;
+			padding-bottom: 10px;
+		}
+
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+
+			h1,
+			h2 {
+				font-size: 140%;
+			}
+
+			.mylist {
+				margin: 0 auto;
+				position: relative;
+				width: 80%;
+			}
+
+			.mylist .row {
+				font-size: 100%;
+				line-height: 120%;
+			}
+
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+			h1,
+			h2 {
+				font-size: 180%;
+			}
+
+			.mylist {
+				margin: 0 auto;
+				position: relative;
+				width: 80%;
+			}
+
+			.mylist .row {
+				font-size: 100%;
+				line-height: 120%;
+			}
+		}
+
+		@media screen and (min-width: 1024px) and (max-width: 1199px) {
+
+			h1,
+			h2 {
+				font-size: 220%;
+			}
+
+			.mylist {
+				margin: 0 auto;
+				position: relative;
+				width: 80%;
+			}
+
+			.mylist .row {
+				font-size: 100%;
+				line-height: 120%;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+
+			h1,
+			h2 {
+				font-size: 260%;
+			}
+
+			.mylist {
+				margin: 0 auto;
+				position: relative;
+				width: 80%;
+			}
+
+			.mylist .row {
+				font-size: 100%;
+				line-height: 120%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+
+
+		<h1><a href="/">CLICK TO PLAY!</a></h1>
+
+		<div id="halloffame">
+			<!--<img src="assets/images/halloffame/spinner.gif" id="spinner" style="position:absolute; top:0; left:50%;" />-->
+
+			<h2>TOP PLAYERS</h2>
+			<div style="padding:0 25px 0 60px;">
+				<ol id="halloffameList" class="mylist"></ol>
+			</div>
+
+		</div>
+		<script>
+			var app = {
+
+				fbConfig: {
+					apiKey: 'AIzaSyAdRVmgt6jh-CJ4nmZQh8KwNp_ABivgdmo',
+					authDomain: 'supermajor2k19.firebaseapp.com',
+					databaseURL: 'https://supermajor2k19.firebaseio.com',
+					projectId: 'supermajor2k19',
+					storageBucket: 'supermajor2k19.appspot.com',
+					messagingSenderId: '789535657299',
+					appId: '1:789535657299:web:ce6ba1fd68a249b1'
+				},
+
+				fbObj: null,
+				fbBtnObj: null,
+				data: [],
+				displayList: document.getElementById("halloffameList"),
+
+
+				init: function () {
+
+					this.createFbObj();
+					this.createFbListener();
+				},
+
+				createFbObj: function () {
+					this.fbObj = firebase.initializeApp(this.fbConfig);
+				},
+
+				createFbListener: function () {
+
+
+					this.fbBtnObj = this.fbObj.database().ref('scores');
+
+					this.fbBtnObj.on('child_added', function (data) {
+
+						app.data.push(data.val())
+						app.manageData();
+
+					})
+
+				},
+
+				setVideoValue: function (value) {
+
+					this.fbVideoObj.set({
+						videoStatus: value
+					});
+
+				},
+
+
+				manageData: function () {
+
+					var values = "";
+
+					app.data.sort(compare);
+
+
+					function compare(a, b) {
+
+						const valueA = a.score;
+						const valueB = b.score;
+
+						let comparison = 0;
+						if (valueA < valueB) {
+							comparison = 1;
+						} else if (valueA > valueB) {
+							comparison = -1;
+						}
+						return comparison;
+					}
+
+
+
+					for (var l = 0; l < app.data.length; l++) {
+
+						values = values + "<li class='row'><img src='./assets/images/game/players/face-" + app.data[l]
+							.name + ".png'> " +
+							app.data[l].name.toUpperCase() + " Scored " + app.data[l].score + " points @ " + app.data[l]
+							.levelName + " </li>"
+
+					}
+
+					app.displayList.innerHTML = values
+
+				}
+			}
+			app.init();
+		</script>
+</body>
+
+</html>

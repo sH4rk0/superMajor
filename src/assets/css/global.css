@@ -1,0 +1,345 @@
+body {
+	margin: 0px 0px 1px 0px;
+	background-color: #6C5EB5;
+}
+
+
+#pwaModal {
+	position: absolute;
+	background: #fff;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+	font-family: 'Press Start 2P',
+		cursive;
+
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	transition-property: opacity;
+	transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	pointer-events: none;
+}
+
+#pwaModal.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#pwaModal span.close {
+	position: absolute;
+	top: 10px;
+	right: 10px
+}
+
+#pwaModal p {
+	line-height: 140%;
+	padding-top: 20px;
+}
+
+#pwaModal button {
+	display: block;
+	margin: 0 auto;
+	background-color: #6C5EB5;
+	padding: 10px 20px;
+	font-size: 150%;
+	color: #fff;
+	margin-bottom: 20px;
+	font-family: 'Press Start 2P',
+		cursive;
+	border-color: #fff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .5)
+}
+
+canvas {
+
+	image-rendering: optimizeSpeed;
+	/* Older versions of FF          */
+	image-rendering: -moz-crisp-edges;
+	/* FF 6.0+                       */
+	image-rendering: -webkit-optimize-contrast;
+	/* Safari                        */
+	image-rendering: -o-crisp-edges;
+	/* OS X & Windows Opera (12.02+) */
+	image-rendering: pixelated;
+	/* Awesome future-browsers       */
+	-ms-interpolation-mode: nearest-neighbor;
+	/* IE                            */
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	max-width: 1080px;
+	max-height: 720px;
+
+
+}
+
+#scanlines {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../assets/images/game/intro/scanlines.png);
+	z-index: 1;
+	pointer-events: none;
+
+}
+
+body.loading {
+	background-color: #887ecb;
+	background-image: url(../../assets/images/game/intro/raster.gif);
+	-webkit-animation: raster 0.4s 10000;
+	/* Chrome, Safari, Opera */
+	animation: raster 0.4s 10000;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes raster {
+	0% {
+		background-position: 0 100px;
+	}
+
+	5% {
+		background-position: 0 200px;
+	}
+
+	10% {
+		background-position: 0 250px;
+	}
+
+	15% {
+		background-position: 0 300px;
+	}
+
+	20% {
+		background-position: 0 50px;
+	}
+
+	25% {
+		background-position: 0 300px;
+	}
+
+	30% {
+		background-position: 0 125px;
+	}
+
+	35% {
+		background-position: 0 200px;
+	}
+
+	40% {
+		background-position: 0 270px;
+	}
+
+	45% {
+		background-position: 0 80px;
+	}
+
+	50% {
+		background-position: 0 120px;
+	}
+
+	55% {
+		background-position: 0 300px;
+	}
+
+	60% {
+		background-position: 0 420px;
+	}
+
+	65% {
+		background-position: 0 400px;
+	}
+
+	70% {
+		background-position: 0 140px;
+	}
+
+	75% {
+		background-position: 0 310px;
+	}
+
+	80% {
+		background-position: 0 190px;
+	}
+
+	85% {
+		background-position: 0 350px;
+	}
+
+	90% {
+		background-position: 0 20px;
+	}
+
+	95% {
+		background-position: 0 70px;
+	}
+
+	100% {
+		background-position: 0 150px;
+	}
+}
+
+/* Standard syntax */
+@keyframes raster {
+	0% {
+		background-position: 0 100px;
+	}
+
+	5% {
+		background-position: 0 200px;
+	}
+
+	10% {
+		background-position: 0 250px;
+	}
+
+	15% {
+		background-position: 0 300px;
+	}
+
+	20% {
+		background-position: 0 50px;
+	}
+
+	25% {
+		background-position: 0 300px;
+	}
+
+	30% {
+		background-position: 0 125px;
+	}
+
+	35% {
+		background-position: 0 200px;
+	}
+
+	40% {
+		background-position: 0 270px;
+	}
+
+	45% {
+		background-position: 0 80px;
+	}
+
+	50% {
+		background-position: 0 120px;
+	}
+
+	55% {
+		background-position: 0 300px;
+	}
+
+	60% {
+		background-position: 0 420px;
+	}
+
+	65% {
+		background-position: 0 400px;
+	}
+
+	70% {
+		background-position: 0 140px;
+	}
+
+	75% {
+		background-position: 0 310px;
+	}
+
+	80% {
+		background-position: 0 190px;
+	}
+
+	85% {
+		background-position: 0 350px;
+	}
+
+	90% {
+		background-position: 0 20px;
+	}
+
+	95% {
+		background-position: 0 70px;
+	}
+
+	100% {
+		background-position: 0 150px;
+	}
+}
+
+
+body.game {
+	background: #6C5EB5;
+	-webkit-animation: fade 2.5s 1;
+	/* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;
+	animation: fade 2.5s 1;
+	animation-fill-mode: forwards;
+
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fade {
+	0% {
+		background: #6C5EB5;
+	}
+
+	100% {
+		background: #000;
+	}
+}
+
+/* Standard syntax */
+@keyframes fade {
+	0% {
+		background: #6C5EB5;
+	}
+
+	100% {
+		background: #000;
+	}
+}
+
+
+#my-game-container {
+
+	height: 100vh;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+}
+
+#my-game {
+	width: 100%;
+	height: 100%;
+	max-width: 1080px;
+	max-height: 720px;
+}

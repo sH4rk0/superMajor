@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,
+      initial-scale=1.0,viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="SuperMajor" />
+  <meta name="apple-mobile-web-app-title" content="SuperMajor" />
+  <meta name="msapplication-starturl" content="./" />
+
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icons-192.png" />
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/icons/icons-192.png" />
+
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/icons-512.png" />
+  <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/icons/icons-512.png" />
+
+  <meta name="viewport" content="initial-scale=1 maximum-scale=1
+      user-scalable=0 minimal-ui" />
+  <meta property="og:title" content="Super Major" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://supermajor2k19.web.app/index.html" />
+  <meta property="og:image" content="https://supermajor2k19.web.app/assets/cover.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:description" content="" />
+
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/global.css" type="text/css" charset="utf-8" />
+  <title>SUPER MAJOR: Baronissi electionday 2k19!</title>
+</head>
+
+<body class="loading">
+
+  <noscript>Please enable javascript to continue using this application.</noscript>
+  <div id="scanlines"></div>
+
+  <div id="my-game-container">
+    <div id="my-game"></div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="pwaModal" style="opacity:0;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Add to home screen for better experience?</p>
+      <button onclick="offlinePrompt()">ADD</button>
+    </div>
+  </div>
+
+  <script>
+    // var loadingScreen = document.getElementsByTagName('body')
+    // loadingScreen[0].addEventListener('click', function(event) {
+    //   event.preventDefault()
+    //   console.log('click')
+    // })
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js', {
+          scope: '/'
+        }).then(function (registration) {
+          //console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          //console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', function (e) {
+      //console.log('beforeinstallprompt triggered');
+      e.preventDefault();
+      deferredPrompt = e;
+      //modal.style.display = 'block';
+      swEnabled = true;
+    });
+    var swEnabled = false;
+    // Get the modal
+    var modal = document.getElementById('pwaModal');
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = 'none';
+    }
+
+    function offlinePrompt() {
+      deferredPrompt.prompt();
+    }
+  </script>
+</body>
+
+</html>
