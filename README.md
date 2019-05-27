@@ -1,12 +1,12 @@
 # Phaser 3 TypeScript Platformer Example
 
-Built with the [**typescript phaser-project-template**](https://github.com/yandeu/phaser-project-template#readme) starter.
+Built with the [**SUPER MAJOR**](https://github.com/sH4rk0/superMajor#readme) starter.
 
 ## Play
 
-[Play the game](https://s3.eu-central-1.amazonaws.com/phaser3-typescript/platformer-example/index.html) (Add it to the homescreen to test the PWA functionality)
+[Play the game](https://supermajor2k19.web.app) (Add it to the homescreen to test the PWA functionality)
 
-[![phaser3-typescript-platformer](screenshots/nexus6-640x360.png)](https://s3.eu-central-1.amazonaws.com/phaser3-typescript/platformer-example/index.html)
+[![SUPER MAJOR](assets/nexus6-640x360.png)]
 
 ## How To Use
 
@@ -14,10 +14,10 @@ To clone and run this game, you'll need [Git](https://git-scm.com) and [Node.js]
 
 ```bash
 # Clone this repository
-$ git clone --depth 1 https://github.com/yandeu/phaser3-typescript-platformer-example.git phaser3-platformer-example
+$ git clone --depth 1 https://github.com/sH4rk0/superMajor.git super-major-2k19
 
 # Go into the repository
-$ cd phaser3-platformer-example
+$ cd super-major-2k19
 
 # Install dependencies
 $ npm install
