@@ -4,7 +4,7 @@
 
 [Play the game](https://supermajor2k19.web.app) (Add it to the homescreen to test the PWA functionality)
 
-[![SUPER MAJOR](/src/assets/images/halloffame/bg-halloffame.jpg)]
+![SUPER MAJOR](/src/assets/images/halloffame/bg-halloffame.jpg)
 
 ## How To Use
 
