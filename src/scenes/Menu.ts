@@ -350,7 +350,7 @@ export default class Menu extends Phaser.Scene {
 
   private initGlobalDataManager(): void {
     this.registry.set('time', 0)
-    this.registry.set('level', 8)
+    this.registry.set('level', 1)
     this.registry.set('score', 0)
     this.registry.set('lives', 3)
     this.registry.set('player', '')

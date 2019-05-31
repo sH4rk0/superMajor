@@ -96,7 +96,7 @@ export default class Level extends Phaser.Scene {
       delay: 300
     })
 
-    /*this.time.addEvent({
+    this.time.addEvent({
       delay: 500,
       callback: () => {
         this.scene.stop('Level')
@@ -108,8 +108,9 @@ export default class Level extends Phaser.Scene {
           this.scene.bringToTop('Joy')
         }
       }
-    })*/
+    })
 
+    /*
     let sound: Phaser.Types.Sound.AudioSpriteSound = this.sound.addAudioSprite('sfx')
     //@ts-ignore
     sound.on('complete', (sound: AudioSpriteSound) => {
@@ -122,8 +123,10 @@ export default class Level extends Phaser.Scene {
         this.scene.bringToTop('Joy')
       }
     })
+ 
     //@ts-ignore
     sound.play('smb_stage_clear')
+       */
   }
 
   update(time: number, delta: number) {

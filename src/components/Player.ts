@@ -158,7 +158,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
       //@ts-ignore
       this.body.onFloor() ||
       //@ts-ignore
-      this.body.touching.down ||
+      //this.body.touching.down ||
       //@ts-ignore
       this.body.blocked.down
     ) {
@@ -212,7 +212,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
       //@ts-ignore
       this.body.onFloor() ||
       //@ts-ignore
-      this.body.touching.down ||
+      //this.body.touching.down ||
       //@ts-ignore
       this.body.blocked.down
     ) {
@@ -264,7 +264,11 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     }
 
     //@ts-ignore
-    if (this.body.velocity.y < 0 || this.body.blocked.down || this.body.touching.down) {
+    if (
+      this.body.velocity.y < 0 ||
+      this.body.blocked.down
+      //|| this.body.touching.down
+    ) {
       //@ts-ignore
       this.body.setVelocityY(-600)
     }
@@ -289,7 +293,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
       //@ts-ignore
       this.body.onFloor() ||
       //@ts-ignore
-      this.body.touching.down ||
+      //this.body.touching.down ||
       //@ts-ignore
       this.body.blocked.down
     ) {
@@ -328,7 +332,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   jumpOverEnemy() {
     // console.log('jumpOverEnemy')
     //@ts-ignore
-    //this.body.setVelocityY(-5000)
+    this.body.setVelocityY(-600)
   }
 
   isActive(): boolean {

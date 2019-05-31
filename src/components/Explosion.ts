@@ -29,7 +29,6 @@ export class Explosion extends Phaser.Physics.Arcade.Sprite {
     }
     this.currentScene.anims.create(_explosion)
     this.play('explosion')
-
     this.on(
       'animationcomplete',
       () => {
