@@ -18,7 +18,7 @@
     "typescript": "^3.3.1",
     "firebase": "^6.0.4",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1",
     "webpack-obfuscator": "^0.18.0",
